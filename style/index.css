@@ -11,7 +11,6 @@ body
 
     display: flex;
     flex-direction: column;
-    background-color: aqua;
 }
 body > *
 {
@@ -23,20 +22,41 @@ body > h1
 }
 .new-wish
 {
+    margin: 2rem 0;
     display: flex;
     justify-content: center;
     gap: 0;
 }
+.new-wish #new-description-wish
+{
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: .5rem 0 0 .5rem;
+    padding: .5rem;
+    width: 100%;
+    max-width: 30rem;
+    height: 2.5rem;
+}
+.new-wish #new-description-wish:focus
+{
+    outline: 0 !important;
+    border: 1px solid rgba(0,0,0,.8);
+}
+.new-wish .btn-new-wish
+{
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 0 .5rem .5rem 0;
+    height: 2.5rem;
+    padding: 0 .5rem;
+    border-left: 0;
+}
 .wish-lists
 {
-    background-color: red;
     display: flex;
     justify-content: center;
     gap: 1rem;
 }
 .wish-lists .list
 {
-    background-color: burlywood;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -47,9 +67,54 @@ body > h1
 {
     width: 100%;
     padding: 1rem;
+    padding-top: 0;
 }
 .wish-lists .list .list-body
 {
     display: flex;
     flex-direction: column;
+}
+.wish-lists .list .list-body .wish
+{
+    padding: .5rem;
+    border-bottom: 1px solid black;
+    display: flex;
+    gap: .5rem;
+    width: 100%;
+    cursor: pointer;
+    background-color: rgba(0,0,0,.1);
+    transition: all ease-in .3s;
+}
+
+.wish-lists .list .list-body .wish:hover
+{
+    color: white;
+    background-color: rgba(0,0,0,.8);
+}
+.wish-lists .list.pending .list-body .wish .description
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wish-lists .list.pending .list-body .wish .btn
+{
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wish-lists .list.pending .list-body .wish .btn.check
+{
+    color: green;
+}
+.wish-lists .list.pending .list-body .wish .btn.delete
+{
+    color: red;
 }
