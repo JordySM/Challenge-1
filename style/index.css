@@ -1,0 +1,55 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+}
+body > *
+{
+    width: 100%;
+}
+body > h1
+{
+    text-align: center;
+}
+.new-wish
+{
+    display: flex;
+    justify-content: center;
+    gap: 0;
+}
+.wish-lists
+{
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.wish-lists .list
+{
+    background-color: burlywood;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 40rem;
+    
+}
+.wish-lists .list .list-header, .wish-lists .list .list-body
+{
+    width: 100%;
+    padding: 1rem;
+}
+.wish-lists .list .list-body
+{
+    display: flex;
+    flex-direction: column;
+}

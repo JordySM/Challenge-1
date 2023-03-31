@@ -5,8 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JordySM | Challenge 1</title>
+    <link rel="stylesheet" href="./style/index.css">
 </head>
 <body>
-    
+    <h1>Lista de deseos</h1>
+    <form method="POST" action="/" id="new-wish" class="new-wish">
+        <input type="text" name="wish">
+        <input type="submit" value="Agregar">
+    </form>
+    <div class="wish-lists">
+        <div class="list pending">
+            <h3 class="list-header">Deseos pendientes: <span class="count-wishes">0</span></h3>
+            <div class="list-body"></div>
+        </div>
+        <div class="list fulffiled">
+            <h3 class="list-header">Deseos cumplidos: <span class="count-wishes">0</span></h3>
+            <div class="list-body"></div>
+        </div>
+    </div>
 </body>
 </html>
